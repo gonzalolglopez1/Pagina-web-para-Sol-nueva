@@ -1,0 +1,33 @@
+.accordion-button{
+   background-color: blueviolet;
+}
+
+
+.contenedorcartas{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 20px;
+   
+   .imagencartas{
+      img{
+         clip-path: ellipse(39% 49% at 50% 50%);
+         width: 200px;
+     }
+   }
+   .card-title{
+      text-align: center;
+   }
+   .card-text{
+      font-size: 1.1rem;
+      text-align: center;
+   }
+   .btn-cartasmasinfo{
+      text-align: center;
+   }
+   .revolucion-img{
+     height: 357.5px;   }
+
+     
+
+}

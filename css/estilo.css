@@ -1,0 +1,271 @@
+/* Variables */
+:root {
+    --main-bg-color: #f0b5e6;
+    --pie-bg-color: #e0a2ef;
+  }
+  
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1{
+    font-size: 1.5rem; 
+}
+p,
+h2,
+h3,
+h4,
+h5,
+h6,
+.boton {
+    
+    font-family: 'Mukta', sans-serif;
+}
+
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+
+
+.header {
+
+    width: 100%;
+    height: 50vh;       
+    display: flex;
+    padding: 0 18px;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.header a{
+    text-decoration: none;
+    color: rgb(238, 106, 214);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 1rem;
+}
+
+
+.navbar-toggler .navbar-toggler-icon{
+    background-color: blueviolet;
+}
+
+.collapse .navbar-nav .nav-link{
+    margin: 0 10px;
+    transition: all 0.8s;
+    border: 1px solid transparent;
+    color: rgb(222, 219, 219);
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: sans-serif;
+    outline: none;
+    
+}
+.collapse .navbar-nav .nav-link:hover{
+    color: rgb(240, 181, 230);
+    border: 1px solid;
+    border-radius: 2em;
+    background-color: rgb(194, 151, 151);
+
+}
+.collapse .navbar-nav .dropdown-menu{
+    background-color: rgb(239, 149, 224);
+}
+.collapse .navbar-nav .dropdown-menu .dropdown-item{
+    font-weight: bolder;
+    font-size: 1rem;
+}
+
+
+
+/* MAIN */
+
+.main {
+   display: flex;
+   flex-direction: row-reverse;
+    background-color: var(--main-bg-color);
+   
+    
+    
+    
+}
+
+
+
+
+.imagenmain img{
+    /* clip-path: ellipse(42% 51% at 53% 52%); */
+    max-width: 100%;
+    margin-bottom: 500px;
+    width: 250px;
+    border-radius: 50%;
+    
+}
+.parrafoindex{
+    width: 50%;
+    letter-spacing: 1.5px;
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+    font-weight: 200;
+    margin: 0 auto;
+}
+.footer {
+    grid-area: footer;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--pie-bg-color);
+}
+.footer h5{
+    font-size: 1.2rem;
+    font-style: italic;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+.footer .redes{
+    align-self: center;
+    margin-bottom: 20px;
+}
+.footer .redes a{
+    margin: 0 1.3rem;
+    color: rgb(99, 93, 82);
+    display: inline-block;
+}
+.footer .redes i{
+    font-size: 1.3rem;
+    color: #000;
+    transition: all 0.2s ease-in;
+}
+.footer .redes i:hover{
+    transition: all 0.3s ease-in;
+    transform: scale(1.4);
+    background-color: var(--main-bg-color);
+}
+
+
+/*-------------CARTAS------------*/
+
+.accordion-button{
+    background-color: blueviolet;
+ }
+
+ .contenedorcartas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+   
+ }
+
+ 
+ .contenedorcartas .card-text{
+    font-size: 1.1rem;
+ }
+ .contenedorcartas .revolucion-img{
+    height: 357.5px;
+ }
+ .contenedorcartas .card-title, .card-text, .btn-cartasmasinfo{
+    text-align: center;
+ }
+ .card-text{
+    font-weight: 500;
+ }
+.carta-prueba, .btn-cartasmasinfo button{
+    background-color: #e0a2ef;
+}
+.btn-cartasmasinfo button{
+    outline: none;
+    border: 1px splid var(--main-bg-color);
+}
+.btn-cartasmasinfo button:hover{
+    background-color: var(--main-bg-color);
+    color:#e0a2ef ;
+}
+.btn-cartasmasinfo button:focus{
+    background-color: #e0a2ef;
+    
+    box-shadow: none;
+}
+ /*-------------CURSOS------------*/
+ .proximamente{
+    text-align: center;       
+ }
+ /*-------------QUIEN SOY------------*/
+ .imgquiencontenedor{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+/*-------------BLOG------------*/
+.imagenmain1{
+    text-align: center;
+}
+.imagenmain1 img{
+    clip-path: ellipse(42% 51% at 53% 52%);
+    width: 200px;
+    
+}
+.contenedorblog{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenedorblog .itemblog{
+    margin: 80px 0;
+}
+.contenedorblog h4 {
+        font-size: 1rem;
+        font-style: italic;
+        font-weight: bold;
+}
+/*-------------CONTACTO------------*/
+.contenedorflex_contacto {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contenedorflex_contacto fieldset{
+    width:100%;
+    padding: 30px;
+    margin-top: 5rem;
+    margin-bottom: 10rem;
+}
+.contenedorflex_contacto fieldset input{
+    margin: 20px;
+    width: 90%;
+}
+.contenedorflex_contacto fieldset textarea{
+    width: 90%;
+    height: 150px;
+    margin: 20px;
+    resize: none; 
+}
+.contenedorflex_contacto fieldset .boton{
+    font-size: 1rem;
+}
+
+/*-------------MEDIA QUERIES------------*/
+
+@media (max-width:576px) {
+    svg{
+     margin-bottom: 120px;
+    }
+    .itemblog{
+       margin: 80px 0;
+       padding: 20px;
+   }
+ }
+
+
+ 

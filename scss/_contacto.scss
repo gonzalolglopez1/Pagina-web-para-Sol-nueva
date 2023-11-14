@@ -1,0 +1,29 @@
+.contenedorflex_contacto {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    fieldset {
+        width:100%;
+        padding: 30px;
+        margin-top: 5rem;
+        margin-bottom: 10rem;
+        input {
+            margin: 20px;
+            width: 90%;
+        
+        }
+        textarea {
+            width: 90%;
+            height: 150px;
+            margin: 20px;
+            resize: none;       
+        
+        }
+        .boton{
+          font-size: 1rem;
+        }
+
+    }
+   
+}
