@@ -11,7 +11,7 @@
     box-sizing: border-box;
 }
 h1{
-    font-size: 1.5rem; 
+    font-size: 1.5rem;
 }
 p,
 h2,
@@ -23,7 +23,10 @@ h6,
     
     font-family: 'Mukta', sans-serif;
 }
-
+body{
+    background-color: rgb(248, 230, 236);
+    
+}
 /*
 * Prefixed by https://autoprefixer.github.io
 * PostCSS: v8.4.14,
@@ -32,15 +35,60 @@ h6,
 */
 
 
+.menu_close{
+    transition: all 0.5s;
+    display: none;
+}
+nav{
+    position: absolute;
+    top:70px;
+    width: 100%;
+    height: 100vh;
+    /* display: flex; */
+    flex-direction: column;
+    
+  display: none;
+  background-color: rgb(0, 0, 0, 0.7);
+    border: 0.2px solid rgb(206, 206, 206);
+    box-shadow: 2px 6px 5px 0px rgba(0,0,0,0.75);
+    transition: all 0.5s;
+    z-index: 10;
+}
+nav ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+   padding-left: 0;
+    text-decoration: none;
+}
+nav ul li{
+    border-bottom: 1px solid var(--main-bg-color);
+    width: 100%;
+   padding: 10px 0;
+    list-style-type: none;
+    text-align: center;
+    margin: 1.8rem 0;
+}
+nav ul li:hover{
+    background-color: var(--main-bg-color);
+}
+.contenedorsol{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
 
 .header {
 
     width: 100%;
-    height: 50vh;       
+ 
     display: flex;
-    padding: 0 18px;
-    justify-content: space-around;
+    flex-direction: column;
+    padding: 30px 18px;
+   
     align-items: center;
+   
     
 }
 .header a{
@@ -53,72 +101,127 @@ h6,
 }
 
 
-.navbar-toggler .navbar-toggler-icon{
-    background-color: blueviolet;
-}
-
-.collapse .navbar-nav .nav-link{
-    margin: 0 10px;
-    transition: all 0.8s;
-    border: 1px solid transparent;
-    color: rgb(222, 219, 219);
-    text-decoration: none;
-    font-size: 1rem;
-    font-family: sans-serif;
-    outline: none;
-    
-}
-.collapse .navbar-nav .nav-link:hover{
-    color: rgb(240, 181, 230);
-    border: 1px solid;
-    border-radius: 2em;
-    background-color: rgb(194, 151, 151);
-
-}
-.collapse .navbar-nav .dropdown-menu{
-    background-color: rgb(239, 149, 224);
-}
-.collapse .navbar-nav .dropdown-menu .dropdown-item{
-    font-weight: bolder;
-    font-size: 1rem;
-}
-
-
 
 /* MAIN */
 
 .main {
+    overflow: hidden;
    display: flex;
-   flex-direction: row-reverse;
-    background-color: var(--main-bg-color);
+   flex-direction: column;    
+    
+}
+.ppresentacion{
+    padding: 1.5rem;
+    
+}
+.masinfo{
+    width: 8rem;
+    padding: 5px;
+    border-radius: 2rem;
+    border: 0.1px solid black;
+    background-color: var(--pie-bg-color);
+    transition: all 1s;
+}
+.masinfo:hover{
+    transform: scale(1.2);
+    color: rgb(248, 230, 236) ;
+}
+.flecha{
    
-    
-    
-    
+    margin: 1.5rem auto;
+    width: 3rem;
 }
 
-
-
-
+.imagenmain{
+    margin-top: 4rem;
+    width: 196px;
+    
+    flex-shrink: 0; 
+    
+}
 .imagenmain img{
-    /* clip-path: ellipse(42% 51% at 53% 52%); */
     max-width: 100%;
-    margin-bottom: 500px;
-    width: 250px;
-    border-radius: 50%;
+    border-radius: 341px; 
+    
     
 }
-.parrafoindex{
-    width: 50%;
-    letter-spacing: 1.5px;
-    font-size: 1.1rem;
-    padding: 1rem 2rem;
-    font-weight: 200;
+.servicios{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+/*-------------CARTAS------------*/
+
+.servicios .contenedorcartas{
+   margin: 2rem 0;
+}
+.servicios .contenedorcartas h2{
+    text-align: center;
+}
+.servicios section{
+    width: 80%;
     margin: 0 auto;
+    border-bottom: 1px solid rgb(0, 0, 0, 0.3);
+}
+.servicios section h2{
+    
+    text-align: center;
+    
+}
+section .servicios  .contenedorimg{
+    margin: 1rem auto;
+    width: 15rem;
+    
+   
+   
+}
+
+.contenedorimgre{
+   
+    margin: 0 auto;
+    width: 70%;
+}
+.rever{
+    text-align: center;
+    width: 100%;
+}
+section .servicios  .contenedorimg .imgcartas{
+max-width: 100%;
+width: 100%;
+height: 300px;
+border-radius: 2rem;
+object-fit: cover;
+}
+h3{
+    text-align: center;
+    color: #eda7ff;
+    margin: 1.7rem auto;
+    width: 100%;
+    padding: 1rem;
+    color: #eda7ff;
+    background-color: rgb(0, 0, 0, 0.4);
+}
+.qtext{
+    text-decoration: none;
+    color: #eda7ff;
+    
+}
+.rever, .quiensol{
+    padding: 20px;
+}
+#carouselExampleControls{
+    height: 400px !important;
+}
+.carousel-item img{
+    max-width: 100%;
+    width: 100%;
+    height: 400px;    
+    object-fit: cover;
 }
 .footer {
-    grid-area: footer;
-    height: auto;
+    
+    
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -152,49 +255,9 @@ h6,
 }
 
 
-/*-------------CARTAS------------*/
 
-.accordion-button{
-    background-color: blueviolet;
- }
 
- .contenedorcartas{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-   
- }
 
- 
- .contenedorcartas .card-text{
-    font-size: 1.1rem;
- }
- .contenedorcartas .revolucion-img{
-    height: 357.5px;
- }
- .contenedorcartas .card-title, .card-text, .btn-cartasmasinfo{
-    text-align: center;
- }
- .card-text{
-    font-weight: 500;
- }
-.carta-prueba, .btn-cartasmasinfo button{
-    background-color: #e0a2ef;
-}
-.btn-cartasmasinfo button{
-    outline: none;
-    border: 1px splid var(--main-bg-color);
-}
-.btn-cartasmasinfo button:hover{
-    background-color: var(--main-bg-color);
-    color:#e0a2ef ;
-}
-.btn-cartasmasinfo button:focus{
-    background-color: #e0a2ef;
-    
-    box-shadow: none;
-}
  /*-------------CURSOS------------*/
  .proximamente{
     text-align: center;       
