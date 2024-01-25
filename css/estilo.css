@@ -39,38 +39,74 @@ body{
     transition: all 0.5s;
     display: none;
 }
-nav{
+#nav{
     position: absolute;
     top:70px;
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     /* display: flex; */
     flex-direction: column;
-    
+    transition: display 1s ease;
   display: none;
   background-color: rgb(0, 0, 0, 0.7);
     border: 0.2px solid rgb(206, 206, 206);
     box-shadow: 2px 6px 5px 0px rgba(0,0,0,0.75);
-    transition: all 0.5s;
     z-index: 10;
 }
-nav ul{
+#nav ul{
+    width: 100%;
+    
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    
    padding-left: 0;
     text-decoration: none;
 }
-nav ul li{
+#nav ul li{
     border-bottom: 1px solid var(--main-bg-color);
     width: 100%;
-   padding: 10px 0;
+    height: 100px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
     list-style-type: none;
     text-align: center;
-    margin: 1.8rem 0;
+    
 }
-nav ul li:hover{
+#nav ul li:hover{
     background-color: var(--main-bg-color);
+}
+
+#menuabierto ul{
+    
+    
+    text-decoration: none;
+    display: flex;
+}
+#menuabierto ul li{
+    display: flex;
+    list-style-type: none;
+    margin: 0 1.2rem;
+    
+   
+}
+#menuabierto ul:hover{
+    transition: all 0.8s ease;
+    background-color: rgb(255, 255, 255);
+    border-radius: 30%;
+}
+#menuabierto ul li a:hover{
+    transition: all 0.8s ease;
+    
+    color:#000;
+}
+#menuabierto ul li a{
+    padding-top: 0.5rem;
+    white-space: pre;
+    width: 100%;
+    height: 100%;
 }
 .contenedorsol{
     position: relative;
@@ -110,21 +146,32 @@ nav ul li:hover{
    flex-direction: column;    
     
 }
+.modificado{
+    font-size: 1.6rem;
+   padding: 5rem;
+
+}
+    
 .ppresentacion{
     padding: 1.5rem;
     
 }
 .masinfo{
-    width: 8rem;
+    width: 10rem;
     padding: 5px;
     border-radius: 2rem;
-    border: 0.1px solid black;
+    color: white;
+    border: 0.1px solid rgb(255, 255, 255);
     background-color: var(--pie-bg-color);
     transition: all 1s;
 }
 .masinfo:hover{
     transform: scale(1.2);
     color: rgb(248, 230, 236) ;
+}
+.masinfo a{
+    text-decoration: none;
+    color: inherit;
 }
 .flecha{
    
@@ -139,13 +186,32 @@ nav ul li:hover{
     flex-shrink: 0; 
     
 }
+.contenedorpym{
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+}
+.imagenmain2{
+   width: 100%;
+   
+    
+    
+}
+.imagenmain2 img{
+    
+    width: 600px;
+    height: 600px;
+    object-fit: cover;
+    object-position: top center;
+}
 .imagenmain img{
     max-width: 100%;
     border-radius: 341px; 
     
-    
 }
+   
 .servicios{
+    width: 100%;
     display: flex;
     flex-direction: column;
     
@@ -160,11 +226,11 @@ nav ul li:hover{
     text-align: center;
 }
 .servicios section{
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     border-bottom: 1px solid rgb(0, 0, 0, 0.3);
 }
-.servicios section h2{
+.servicios  h2{
     
     text-align: center;
     
@@ -178,13 +244,23 @@ section .servicios  .contenedorimg{
 }
 
 .contenedorimgre{
-   
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
     margin: 0 auto;
     width: 70%;
 }
 .rever{
+   
     text-align: center;
     width: 100%;
+}
+.rever2{
+    padding: 1.5rem;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    margin-top: 3rem;
 }
 section .servicios  .contenedorimg .imgcartas{
 max-width: 100%;
@@ -192,11 +268,20 @@ width: 100%;
 height: 300px;
 border-radius: 2rem;
 object-fit: cover;
+background-position: center center;
+}
+.contenedorimg .imgcartas{
+    max-width: 100%;
+width: 100%;
+height: 300px;
+border-radius: 2rem;
+object-fit: cover;
+background-position: center center;
 }
 h3{
     text-align: center;
     color: #eda7ff;
-    margin: 1.7rem auto;
+    margin: 1.7rem 0;
     width: 100%;
     padding: 1rem;
     color: #eda7ff;
@@ -207,8 +292,11 @@ h3{
     color: #eda7ff;
     
 }
-.rever, .quiensol{
+.rever{
     padding: 20px;
+}
+#quiensoy{
+    width: 100%;
 }
 #carouselExampleControls{
     height: 400px !important;
@@ -219,6 +307,121 @@ h3{
     height: 400px;    
     object-fit: cover;
 }
+
+.secartas{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;    /* margin-top: 5rem; */
+}
+.secartas .contenedorimgaparte .imgcartasaparte{
+   max-width: 100%;
+   width: 100%;
+   
+   object-fit: contain;
+   
+   
+    text-align: center;
+    
+}
+.secartas .contenedorimgaparte{
+    width: 30%;
+    
+    margin: 0 auto;
+}
+.seccioncartastexto{
+    margin: 2rem;
+    text-align: center;
+}
+ /*--------------------CURSOS-----------------------------*/
+.proximamente{
+    text-align: center;       
+ }
+
+
+ /*-------------------QUIEN SOY----------------------------*/
+ .imgquiencontenedor{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+
+
+/*----------------------BLOG-------------------------------*/
+.blog{
+    width: 100%;
+    overflow: hidden;
+}
+.contenedorblog{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 2rem;
+    overflow: hidden;
+}
+.contenedorblog .itemblog{
+    margin: 50px 0;
+}
+.textoitem{
+
+    font-size: 1.2rem;
+}
+.contenedorblog h4 {
+        font-size: 1rem;
+        font-style: italic;
+        font-weight: bold;
+}
+
+.imgblog{
+    width: 100%;
+}
+.imgblog img{
+    max-width: 100%;
+    object-fit: cover;
+}
+
+
+/*---------------------CONTACTO--------------------------*/
+.contenedorflex_contacto {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contenedorflex_contacto fieldset{
+    width:100%;
+    padding: 30px;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+.contenedorflex_contacto fieldset label{
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px black;
+}
+.contenedorflex_contacto fieldset input{
+    margin: 20px;
+    width: 90%;
+}
+.contenedorflex_contacto fieldset textarea{
+    width: 90%;
+    height: 150px;
+    margin: 20px;
+    resize: none; 
+}
+.contenedorflex_contacto fieldset .boton{
+    height: 2.3rem;
+    font-size: 1rem;
+    font-weight: 800;
+    border-radius: 2rem;
+    border: none;
+    background-color: #e0a2ef;
+    color: white;
+}
+
+
+/* -----------------------------pie de pàgina------------------------------------------ */
 .footer {
     
     
@@ -258,76 +461,92 @@ h3{
 
 
 
- /*-------------CURSOS------------*/
- .proximamente{
-    text-align: center;       
- }
- /*-------------QUIEN SOY------------*/
- .imgquiencontenedor{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    
-}
-/*-------------BLOG------------*/
-.imagenmain1{
-    text-align: center;
-}
-.imagenmain1 img{
-    clip-path: ellipse(42% 51% at 53% 52%);
-    width: 200px;
-    
-}
-.contenedorblog{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.contenedorblog .itemblog{
-    margin: 80px 0;
-}
-.contenedorblog h4 {
-        font-size: 1rem;
-        font-style: italic;
-        font-weight: bold;
-}
-/*-------------CONTACTO------------*/
-.contenedorflex_contacto {
-    margin-top: 5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.contenedorflex_contacto fieldset{
-    width:100%;
-    padding: 30px;
-    margin-top: 5rem;
-    margin-bottom: 10rem;
-}
-.contenedorflex_contacto fieldset input{
-    margin: 20px;
-    width: 90%;
-}
-.contenedorflex_contacto fieldset textarea{
-    width: 90%;
-    height: 150px;
-    margin: 20px;
-    resize: none; 
-}
-.contenedorflex_contacto fieldset .boton{
-    font-size: 1rem;
-}
 
-/*-------------MEDIA QUERIES------------*/
 
-@media (max-width:576px) {
-    svg{
-     margin-bottom: 120px;
+/*------------------------MEDIA QUERIES-----------------------------------*/
+@media (max-width:768px) {
+    #menuabierto{
+        display: none;
     }
-    .itemblog{
-       margin: 80px 0;
-       padding: 20px;
+    .contenedorpym{
+        display: none;
+    }
+    .h3pc{
+        display: none;
+    }
+    .secartas .contenedorimgaparte{
+        width: 50%;
+        
+        margin: 0 auto;
+    }
+    .ppresentacion{
+        display: block;
+    }
+}
+@media (min-width:769px) {
+   .iconosmenu{
+    display: none;
    }
+   .header{
+    flex-direction: row;
+    justify-content: space-around;
+   
+   
+   }
+   .ppresentacion{
+    display: none;
+   }
+   
+   .imagenmain{
+    display: none;
+   }
+   .logosol__nav{
+    display: inline-block;
+   }
+   .contenedorsol{
+    width: auto;
+   }
+   .servicios{
+    display:flex ;
+    flex-direction: row;
+    justify-content: baseline;
+    align-items: flex-start;
+   
+   }
+ .h3movil{
+    display: none;
+ }
+   
+   .titulomovil{
+    display: none;
+   }
+   .slide{
+    
+    width:400px;
+    margin-bottom: 20rem;
+   }
+   .carousel-item img{
+      width: 400px;
+      height: auto;       
+      object-fit: contain;
+   }
+   .carousel-control-prev-icon, .carousel-control-next-icon{
+    background-color: #000;
+   
+   }
+   
+   #quienSoy{
+    display: flex;
+   }
+   .carousel-item{
+    width: 400px;
+   }
+   .imgblog img{
+    width: 100%;
+   height: 350px;
+   object-position: top;
+}
+
  }
 
 
