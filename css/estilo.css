@@ -509,9 +509,15 @@ h3{
    .servicios{
     display:flex ;
     flex-direction: row;
-    justify-content: baseline;
-    align-items: flex-start;
+    flex-wrap: wrap;
+    
+    
+    /* justify-content: baseline;
+    align-items: flex-start; */
    
+   }
+   .contenedorcartas{
+    flex:50%;
    }
  .h3movil{
     display: none;
