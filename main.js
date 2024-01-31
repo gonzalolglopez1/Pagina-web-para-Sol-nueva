@@ -29,11 +29,3 @@ close.addEventListener("click",() =>{
     
 })
 
-menues.forEach(element => {
-  element.addEventListener("click", () =>{
-    nav.style.display = "none";
-open.style.display = "block";
-close.style.display = "none";
-  }
-  )  
-});
