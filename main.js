@@ -11,6 +11,11 @@ const contacto = document.getElementById("btncontacto")
 let menues = [inicio, cartas, cursos, soy, blog, contacto];
 
 let nav = document.getElementById("nav")
+
+ window.onload = function() {
+     var exampleModal = new bootstrap.Modal(document.getElementById('exampleModal'));
+    exampleModal.show();
+ };
  
 open.addEventListener("click",() =>{
     console.log("funciona")
@@ -28,4 +33,5 @@ close.addEventListener("click",() =>{
     
     
 })
+
 
