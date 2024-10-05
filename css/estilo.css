@@ -301,11 +301,14 @@ h3{
 #carouselExampleControls{
     height: 400px !important;
 }
+.carousel-item{
+    height: 400px;
+}
 .carousel-item img{
     max-width: 100%;
     width: 100%;
-    height: 400px;    
-    object-fit: cover;
+    height: 100%;    
+    object-fit: contain;
 }
 
 .secartas{
@@ -350,37 +353,54 @@ h3{
 /*----------------------BLOG-------------------------------*/
 .blog{
     width: 100%;
+    height: auto;
     overflow: hidden;
 }
-.contenedorblog{
+.contenedorlibro{
+    height: auto;
+}
+.imglibros {
+   
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 2rem;
-    overflow: hidden;
-}
-.contenedorblog .itemblog{
-    margin: 50px 0;
-}
-.textoitem{
-
-    font-size: 1.2rem;
-}
-.contenedorblog h4 {
-        font-size: 1rem;
-        font-style: italic;
-        font-weight: bold;
-}
-
-.imgblog{
+    flex-wrap: wrap; /* Permite que las imágenes se dispongan en varias filas si no hay suficiente espacio */
+    justify-content: center; /* Centra las imágenes horizontalmente */
+    gap: 20px; /* Espacio entre las imágenes */
+    width: 80%; /* El contenedor ocupará el 80% del ancho disponible */
+    margin: 0 auto; /* Centra el contenedor en la página */
+  }
+  
+  .imglibros img {
     width: 100%;
+    max-width: 300px; /* Ajusta este valor según el tamaño que desees para las imágenes */
+    height: auto;
+  }
+.contendorsinopsis{
+    margin-top: 2rem;
 }
-.imgblog img{
-    max-width: 100%;
-    object-fit: cover;
+  .sinopsis {
+    width: 80%; /* El párrafo ocupará el 80% del ancho disponible */
+    margin: 0 auto; /* Centra el párrafo horizontalmente */
+    text-align: center; /* Centra el texto dentro del párrafo */
+    line-height: 1.6; /* Opcional: Ajusta el espacio entre líneas para mejorar la legibilidad */
+  }
+
+.botonlibro{
+    width: 12rem;
+    height: 5rem;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 5rem;
+    background-color: #eda7ff;
+    color: azure;
+    transition: all 0.5s;
+    z-index: 1;
 }
-
-
+.botonlibro:hover{
+    transform: scale(1.1);
+}
+.compralo{
+    margin-top: 2rem;
+}
 /*---------------------CONTACTO--------------------------*/
 .contenedorflex_contacto {
     margin-top: 5rem;
@@ -482,6 +502,11 @@ h3{
     .ppresentacion{
         display: block;
     }
+    .botonlibro{
+        width: 8rem;
+        height: 4rem;
+        font-size: 1.1rem;
+    }
 }
 @media (min-width:769px) {
    .iconosmenu{
@@ -531,11 +556,7 @@ h3{
     width:400px;
     margin-bottom: 20rem;
    }
-   .carousel-item img{
-      width: 400px;
-      height: auto;       
-      object-fit: contain;
-   }
+  
    .carousel-control-prev-icon, .carousel-control-next-icon{
     background-color: #000;
    
