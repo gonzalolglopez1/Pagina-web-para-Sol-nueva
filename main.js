@@ -11,15 +11,21 @@ const contacto = document.getElementById("btncontacto")
 let menues = [inicio, cartas, cursos, soy, blog, contacto];
 
 let nav = document.getElementById("nav")
+let navabierto = document.getElementById("navabierto")
 
-  window.onload = function() {
-     var exampleModal = new bootstrap.Modal(document.getElementById('exampleModal'));
-     exampleModal.show();
- };
+function showModalFirstTime() {
+    if (!localStorage.getItem('modalShown')) {
+      var modal = new bootstrap.Modal(document.getElementById('exampleModal'));
+      modal.show();
+      localStorage.setItem('modalShown', 'true');
+    }
+  }
+  
+  window.onload = showModalFirstTime;
  
 open.addEventListener("click",() =>{
     console.log("funciona")
-    nav.style.display = "block";
+    navabierto.style.display = "block";
     document.getElementById("menu_open1").style.display = "none";
     document.getElementById("menu_close2").style.display = "block";
 
@@ -27,11 +33,19 @@ open.addEventListener("click",() =>{
 })
 close.addEventListener("click",() =>{
     console.log("funciona")
-    nav.style.display = "none";
+    navabierto.style.display = "none";
     document.getElementById("menu_open1").style.display = "block";
     document.getElementById("menu_close2").style.display = "none";
     
     
 })
 
+menues.forEach(menuItem => {
+    menuItem.addEventListener("click", () => {
+      navabierto.style.display = "none";
+      open.style.display = "block";
+      close.style.display = "none";
+    });
+  });
+  
 
